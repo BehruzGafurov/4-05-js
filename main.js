@@ -21,7 +21,7 @@ for (let i = 1; i <= 10; i++) {
     console.log(weight + " kg konfet narxi: " + cost + " sum");
 }
 
-// 3-масала: n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi dastur tuzilsin:
+// for3: n butun soni berilgan (n > 0). Quyidagi yig'indini hisoblovchi dastur tuzilsin:
 // S = n^2 + (n+1)^2 + (n+2)^2 + ... + (2*n)^2
 
 n = 5;
@@ -36,23 +36,26 @@ if (n > 0) {
     console.log("n soni musbat bo'lishi kerak");
 }
 
-// 4-масала: N butun soni berilgan. Quyidagi yig'indini chiqaruvchi dastur tuzilsin:
+// for4: N butun soni berilgan. Quyidagi yig'indini chiqaruvchi dastur tuzilsin:
 // 1^N + 2^(N-1) + ... + N^1
 
-n = 5;
+n = 5; 
 sum = 0;
 console.log("4-масала ечими:");
 for (let i = 1; i <= n; i++) {
-    let term = Math.pow(i, n - i + 1);
+    let term = 1;
+    for (let j = 0; j < (n - i + 1); j++) {
+        term *= i;
+    }
     sum += term;
 }
 console.log("Yig'indi: " + sum);
 
-// 5-масала: A va B butun sonlari berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi dastur tuzilsin.
+// for5: A va B butun sonlari berilgan (A < B). A va B sonlari orasidagi barcha butun sonlarni chiqaruvchi dastur tuzilsin.
 // Bunda har bir son o'zining qiymaticha chiqarilsin. Ya'ni 3 soni 3 marta chiqariladi.
 
-let A = 2; // Boshlang'ich son
-let B = 4; // Tugash soni
+let A = 2; 
+let B = 4; 
 console.log("5vfcfkf:");
 if (A < B) {
     for (let i = A; i <= B; i++) {
@@ -61,10 +64,10 @@ if (A < B) {
         }
     }
 } else {
-    console.log("A soni B dan kichik bo'lishi kerak!");
+    console.log("A soni B dan kichik bo'lishi kerak");
 }
 
-// 6-масала: Sonning bo'luvchilarini topish:
+//for6: Sonning bo'luvchilarini topish:
 
 let number = 12; 
 console.log("6масала :");
